@@ -49,12 +49,14 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 18,
         marginBottom: 20,
+        fontFamily:'PTSerifBold'
     },
 
     formLabel: {
         fontWeight: 'bold',
         marginBottom: 10,
-        marginLeft: 5
+        marginLeft: 5,
+        fontFamily:'PTSerif'
     },
 
     formField: {
@@ -67,7 +69,8 @@ const styles = StyleSheet.create({
         marginBottom: 25,
         borderBottomColor: Colors.primary,
         borderBottomWidth: 2,
-        color: Colors.primary
+        color: Colors.primary,
+        fontFamily:'PTSerif'
     }
 });
 

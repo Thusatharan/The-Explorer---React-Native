@@ -9,6 +9,13 @@ const DetailScreen = props => {
     );
 };
 
+
+DetailScreen.navigationOptions = navData => {
+    return {
+        headerTitle: navData.navigation.getParam('placeName'),
+    };
+};
+
 const styles = StyleSheet.create({
 
 });
