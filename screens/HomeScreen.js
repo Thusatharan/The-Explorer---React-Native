@@ -1,11 +1,13 @@
 import React from 'react';
 import { View, Text, StyleSheet, Platform } from 'react-native';
-import { HeaderButtons, Item } from 'react-navigation-header-buttons';
-import CustomHeaderButton from '../components/HeaderButton';
+import AddButton from '../components/CustomButton';
 
 const HomeScreen = props => {
+    console.log(props);
     return (
-        <View>
+        <View style={styles.mainConainer}>
+            
+                <AddButton onpress={() => {props.navigation.navigate('AddNew')}}/>
             <Text>HomeScreen</Text>
         </View>
     );
@@ -14,19 +16,14 @@ const HomeScreen = props => {
 HomeScreen.navigationOptions = navData => {
     return {
         headerTitle: 'Welcome',
-        headerRight : () => 
-            <HeaderButtons HeaderButtonComponent = {CustomHeaderButton}> 
-                <Item  
-                    title = "Add Places"
-                    iconName = {Platform.OS === 'andoird' ? 'md-add' : 'ios-add'}
-                />
-            </HeaderButtons>
-        
     };
 };
 
 const styles = StyleSheet.create({
-
+    mainConainer:{
+        flex: 1,
+        alignItems:'center'
+    }
 });
 
 export default HomeScreen;
