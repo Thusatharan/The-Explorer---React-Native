@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, TextInput, Button } from 'react-native';
 import Colors from '../constans/Colors';
 import { useDispatch } from 'react-redux';
 import * as placesActions from '../store/PlacesActions';
+import ImageSelect from '../components/ImagePicker';
 
 const AddNew = props => {
     const [titleText, setTitleText] = useState('');
@@ -24,8 +25,7 @@ const AddNew = props => {
             <Text style={styles.formHead}>Add following details</Text>
             <Text style={styles.formLabel}>Title</Text>
             <TextInput style={styles.formField} onChangeText={titleChangeHandler} value={titleText} />
-            <Text style={styles.formLabel}>Title</Text>
-            <TextInput style={styles.formField} />
+            <ImageSelect/>
             <Button color={Colors.primary} title="Add Place" style={styles.formButton} onPress={savePlace} />
         </View>
     );
